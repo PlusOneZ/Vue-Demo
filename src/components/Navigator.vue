@@ -8,10 +8,10 @@
           <img alt="logo" src="https://i.loli.net/2021/05/18/Emr2jeatvbwOdAZ.png" class="w-8">
         </div>
         <ul class="float-left text-base font-bold text-center my-1 mx-3">
-          <li class="active nav-item"><a> School </a></li>
-          <li class="nav-item"><a> Course </a></li>
-          <li class="nav-item"><a> Todo </a></li>
-          <li class="nav-item"><a> Square </a></li>
+          <li class="nav-item" :class="{active: activate === 'school'}"> <a href="/school"> School </a> </li>
+          <li class="nav-item" :class="{active: activate === 'course'}"> <a href="/course"> Course </a> </li>
+          <li class="nav-item" :class="{active: activate === 'todo'}"> <a href="/todo"> Todo </a> </li>
+          <li class="nav-item" :class="{active: activate === 'square'}"> <a href="/square"> Square </a> </li>
         </ul>
         <ul class="float-right text-base font-bold text-center my-1 mx-3">
           <li class="nav-item"><a> Notifications<span class="text-red-400">(10)</span> </a></li>
@@ -29,7 +29,10 @@
 
 <script>
 export default {
-  name: "Navigator"
+  name: "Navigator",
+  props: {
+    activate: String
+  }
 }
 </script>
 
@@ -42,6 +45,12 @@ export default {
 li.active {
   @apply text-blue-700
 }
+
+li a:hover {
+  @apply text-blue-400;
+  cursor: pointer;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

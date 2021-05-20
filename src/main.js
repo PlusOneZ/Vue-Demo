@@ -6,16 +6,19 @@ import '@/assets/css/tailwind.css'
 Vue.config.productionTip = false
 
 const NotFoundComponent = { template: '<p>Page not found</p>' }
-const HomeComponent = login
+const LoginComponent = login
 const AboutComponent = { template: '<p>About page</p>' }
 const CourseComponent = CoursePage
 
 const routes = {
-  '/': HomeComponent,
-  '/index': HomeComponent,
-  '/login': HomeComponent,
+  '/': LoginComponent,
+  '/index': LoginComponent,
+  '/login': LoginComponent,
   '/course': CourseComponent,
-  '/about': AboutComponent
+  '/about': AboutComponent,
+  '/school': LoginComponent,
+  '/todo': LoginComponent,
+  '/square': LoginComponent
 }
 
 new Vue({

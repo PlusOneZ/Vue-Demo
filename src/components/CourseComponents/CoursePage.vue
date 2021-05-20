@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Navigator class="backdrop-blur-lg z-50 ">
+    <Navigator
+        activate="course"
+    >
     </Navigator>
 
     <div class="flex">
